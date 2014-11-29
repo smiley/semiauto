@@ -16,7 +16,7 @@ if Trace == nil then
 end
 
 local money_notifier = CreateFrame("Frame", nil, UIParent)
-money_notifier:RegisterEvent(LOOT_OPENED);
+money_notifier:RegisterEvent(LOOT_OPENED)
 
 if _semiauto == nil then
     _semiauto = {}
@@ -48,9 +48,9 @@ local function eventHandler(self, event, arg1, ...)
     end
 end
 
-money_notifier:SetScript("OnEvent", eventHandler);
+money_notifier:SetScript("OnEvent", eventHandler)
 
-SLASH_SEMIAUTOLOOTER1 = '/looter'; -- 3.
+SLASH_SEMIAUTOLOOTER1 = '/looter'
 local ON = "on"
 local OFF = "off"
 
