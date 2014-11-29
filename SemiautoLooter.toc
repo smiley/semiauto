@@ -1,0 +1,10 @@
+## Interface: 60000
+## Author: smileybarry
+## Title: Semi-Auto Looter
+## Version: 1.0
+## Notes: Auto-loots certain item types. (At this point just money & quest items)
+## License: All Rights Reserved
+## SavedVariables: _semiauto
+## OptionalDeps: ObjectOriented
+
+Semiauto.lua
