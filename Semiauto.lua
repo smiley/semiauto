@@ -7,6 +7,7 @@ LootMode.AUTO_LOOTING = 1
 
 if Trace == nil then
     -- ObjectOriented isn't loaded. Use an empty stub instead.
+    Trace = {}
     
     function Trace:Error(msg) end
     function Trace:Warn(msg) end
