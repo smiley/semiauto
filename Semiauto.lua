@@ -34,14 +34,12 @@ local function eventHandler(self, event, arg1, ...)
             local loot_count = GetNumLootItems()
             for slot = 1, loot_count do
                 _,_,_,_,locked,isQuestItem = GetLootSlotInfo(slot)
-                if GetLootSlotType(slot) == LOOT_SLOT_MONEY and not locked and _semiauto.money then
-                    Trace:Debug("Found money! Looting...")
-                    LootSlot(slot);
-                    break
-                elseif isQuestItem == true and not locked and _semiauto.quest then
+                if isQuestItem == true and not locked and _semiauto.quest then
                     Trace:Debug("Found quest item! Looting...")
                     LootSlot(slot);
-                    break
+                elseif GetLootSlotType(slot) == LOOT_SLOT_MONEY and not locked and _semiauto.money then
+                    Trace:Debug("Found money! Looting...")
+                    LootSlot(slot);
                 end
             end
         end
